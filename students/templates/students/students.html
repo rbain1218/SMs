@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students List</title>
+</head>
+<body>
+    <h1>All Students</h1>
+
+    {% if students %}
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>Name</th>
+                <th>Roll No</th>
+                <th>Email</th>
+                <th>Class</th>
+            </tr>
+            {% for s in students %}
+            <tr>
+                <td>{{ s.first_name }} {{ s.last_name }}</td>
+                <td>{{ s.roll_number }}</td>
+                <td>{{ s.email }}</td>
+                <td>{{ s.class_assigned }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No students found.</p>
+    {% endif %}
+</body>
+</html>

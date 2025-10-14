@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classes List</title>
+</head>
+<body>
+    <h1>All Classes</h1>
+
+    {% if classes %}
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>Class Name</th>
+                <th>Section</th>
+                <th>Class Teacher</th>
+            </tr>
+            {% for c in classes %}
+            <tr>
+                <td>{{ c.class_name }}</td>
+                <td>{{ c.section }}</td>
+                <td>{{ c.class_teacher }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No classes found.</p>
+    {% endif %}
+</body>
+</html>

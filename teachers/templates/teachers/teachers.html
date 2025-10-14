@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teachers List</title>
+</head>
+<body>
+    <h1>All Teachers</h1>
+
+    {% if teachers %}
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Email</th>
+                <th>Date Joined</th>
+            </tr>
+            {% for t in teachers %}
+            <tr>
+                <td>{{ t.first_name }} {{ t.last_name }}</td>
+                <td>{{ t.subject }}</td>
+                <td>{{ t.email }}</td>
+                <td>{{ t.date_joined }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No teachers found.</p>
+    {% endif %}
+</body>
+</html>
