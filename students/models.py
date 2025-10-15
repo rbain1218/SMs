@@ -1,5 +1,5 @@
 from django.db import models
-from classes.models import ClassModel  # Optional (if you want to link student to class)
+from classes.models import ClassModel  
 
 class Student(models.Model):
     first_name = models.CharField(max_length=100)
